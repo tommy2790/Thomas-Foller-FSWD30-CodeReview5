@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dating Website</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="codereview5finalstyle.css">
+	 <!-- ------ Fonts ------ -->
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+
+
+	<!-- ======= Start Navbar ========= -->
+	<nav>
+		<div class="container1">
+			<p><img src="CR5/logo-coders-dating.png" alt=""></p>
+		</div>
+	</nav>
+
+	<!-- ====== Start Header ======== -->
+	<header>
+		
+			<p>Welcome to our</p>
+			<p>Dating Website</p>
+		 <div class="clear"></div>
+	</header>
+
+	<div id="page-wrapper">
+		<div class="person">
+			<table>
+				<tr>
+					<td class="profile"><img src="CR5/boy1.jpg" width="100px" /></td>
+					<td>
+						<table>
+							<tr>	
+								<td>Name:</td>
+								<td>John</td>
+							</tr>
+							<tr>
+								<td>Surname:</td>
+								<td>English</td>
+							</tr>	
+							<tr>
+								<td>Age:</td>
+								<td>26</td>
+							</tr>
+							<tr>
+								<td><button class="like1">Like</button></td>
+								<td><span id="number1"> 11 </span><img src="CR5/like.png" /> </td>
+							</tr>
+							
+						</table>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+			
+		<div class="person">
+			<table>
+				<tr>
+					<td class="profile"><img src="CR5/boy2.jpg" width="100px" /></td>
+					<td>
+						<table>
+							<tr>	
+								<td>Name:</td>
+								<td>Frank</td>
+							</tr>
+							<tr>
+								<td>Surname:</td>
+								<td>Tank</td>
+							</tr>	
+							<tr>
+								<td>Age:</td>
+								<td>32</td>
+							</tr>
+							<tr>
+								<td><button class="like2">Like</button></td>
+								<td><span id="number2" class="heart">13</span><img src="CR5/like.png" /> </td>
+							</tr>
+							
+						</table>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+		<div class="person">
+			<table>
+				<tr>
+					<td class="profile"><img src="CR5/girl1.jpg" width="100px" /></td>
+					<td>
+						<table>
+							<tr>	
+								<td>Name:</td>
+								<td>Maxine</td>
+							</tr>
+							<tr>
+								<td>Surname:</td>
+								<td>Mara</td>
+							</tr>	
+							<tr>
+								<td>Age:</td>
+								<td>22</td>
+							</tr>
+							<tr>
+								<td><button class="like3">Like</button></td>
+								<td><span id="number3" class="heart">14</span><img src="CR5/like.png" /> </td>
+							</tr>
+							
+						</table>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+		<div class="person">
+			<table>
+				<tr>
+					<td class="profile"><img src="CR5/girl2.jpg" width="100px" /></td>
+					<td>
+						<table>
+							<tr>	
+								<td>Name:</td>
+								<td>Justine</td>
+							</tr>
+							<tr>
+								<td>Surname:</td>
+								<td>Bedford</td>
+							</tr>	
+							<tr>
+								<td>Age:</td>
+								<td>21</td>
+							</tr>
+							<tr>
+								<td><button class="like4">Like</button></td>
+								<td><span id="number4" class="heart">24</span><img src="CR5/like.png" /> </td>
+							</tr>
+							
+						</table>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+
+	<footer>
+		<hr>
+		<div class="footer">
+		<img src="CR5/logo-coders-dating-footer.png" alt="" width="300px" height="100%">
+		</div>
+	</footer>
+
+<script>
+	var persons = [
+                        {
+			name: 'John',
+			surname: 'Doe',
+			favoritePerformers: ["Justin Timberlake", "Ed Sheeran", "Emma Watson"],
+			age: 25,
+			likes: 11    
+			},
+
+						{
+			name: 'Johnny',
+			surname: 'Doey',
+			favoritePerformers: ["Rammstein", "Metallica", "Motorhead"],
+			age: 27,
+			likes: 13				
+			},
+
+						{
+			name: 'Joanna',
+			surname: 'Dodo',
+			favoritePerformers: ["Britney Spears", "Lady Gaga", "Beyonce"],
+			age: 23,
+			likes: 14				
+			},
+
+						{
+			name: 'Jojo',
+			surname: 'Doah',
+			favoritePerformers: ["The Killers", "The Cure", "The Used"],
+			age: 28,
+			likes: 24				
+			},
+			
+];
+
+        $(".like1").click(function(){
+            var plusLike = 1;
+            var plusLike = (plusLike+persons[0].likes);
+            persons[0].likes = plusLike;
+            var plusLike =  $("#number1").html(plusLike);
+        });
+
+         $(".like2").click(function(){
+            var plusLike = 1;
+            var plusLike = (plusLike+persons[1].likes);
+            persons[1].likes = plusLike;
+            var plusLike =  $("#number2").html(plusLike);
+        });
+
+          $(".like3").click(function(){
+            var plusLike = 1;
+            var plusLike = (plusLike+persons[2].likes);
+            persons[2].likes = plusLike;
+            var plusLike =  $("#number3").html(plusLike);
+        });
+
+           $(".like4").click(function(){
+            var plusLike = 1;
+            var plusLike = (plusLike+persons[3].likes);
+            persons[3].likes = plusLike;
+            var plusLike =  $("#number4").html(plusLike);
+        });
+
+</script>
+</body>
+</html>
+
+ 
+        
